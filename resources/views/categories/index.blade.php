@@ -12,7 +12,7 @@
             <x-auth-session-status class="mb-4" :status="session('status')" />
 
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 bg-white border-b border-gray-200">
+                <div class="p-6 bg-white dark:bg-gray-700 border-b border-gray-200">
                     <table class="min-w-full divide-y divide-gray-200 table-fixed dark:divide-gray-700">
                         <thead class="bg-gray-100 dark:bg-gray-700">
                             <tr>
@@ -33,7 +33,7 @@
                                     <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">{{ $category->name }}</td>
                                     <td class="py-4 px-6 text-sm font-medium text-gray-500 whitespace-nowrap dark:text-white">{{ $category->description }}</td>
                                     <td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
-                                        <a href="#" class="text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                                        <a href="{{ route('categories.edit', $category->id) }}" class="text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                                     </td>
                                 </tr>
                             @endforeach
